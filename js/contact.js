@@ -50,7 +50,7 @@
    function mail() {
        var confS = confirm("You are about to mail me, do you wish to continue?");
        if (confS == true) {
-           window.location = "mailto:berlinebot@gmail.com";
+           window.location = "mailto:berlinebot@gmail.com?subject:Contacting%20Berlinebot";
            return true;
        } else {
 

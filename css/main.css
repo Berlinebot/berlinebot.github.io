@@ -53,6 +53,41 @@ iframe {
     color: inherit;
 }
 
+::-moz-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::-webkit-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::-o-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::-ms-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
 .i,
 i {
     font-style: italic;

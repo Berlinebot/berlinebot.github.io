@@ -105,9 +105,9 @@ function createMessage(messagesArray, i, response) {
 
             $('#chat-container').append(htmlWrapperBeginning + messagesArray[i] + htmlWrapperEnding);
             //Special case for chat
-            // if ($(".active").attr('id') == "chat") {
+            if ($(".active").attr('id') == "chat") {
                 smoothScrollBottom();
-            // }
+            }
             i++;
             createMessage(messagesArray, i, response);
         }
@@ -143,9 +143,9 @@ function createAnswerField() {
     $('#answer').focus();
 
     //Special case for chat
-    // if ($(".active").attr('id') == "chat") {
+    if ($(".active").attr('id') == "chat") {
         smoothScrollBottom();
-    // }
+    }
 }
 
 function createAnswerMessage(answer) {

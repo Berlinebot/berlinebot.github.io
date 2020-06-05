@@ -14,15 +14,12 @@
     /* Generate paddings inside elements */
 }
 
-body,
-.screen {
+body, .screen {
     -webkit-tap-highlight-color: transparent;
     /* Removes the blue highlight when button tapped on mobile */
 }
 
-input,
-textarea,
-[contenteditable] {
+input, textarea, [contenteditable] {
     width: auto;
     -webkit-text-fill-color: inherit;
     -webkit-box-sizing: border-box;
@@ -36,9 +33,9 @@ textarea,
 }
 
 .highlight {
-    color: #9966ff;
-    background-color: inherit;
-    font-weight: bold;
+    background-color: #9966ff;
+    color: #ffffff;
+    padding: 12px auto;
 }
 
 .menuIcon {
@@ -80,11 +77,9 @@ textarea,
     0% {
         opacity: 1;
     }
-
     50% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -94,11 +89,9 @@ textarea,
     0% {
         opacity: 1;
     }
-
     50% {
         opacity: 0;
     }
-
     100% {
         opacity: 1;
     }
@@ -193,9 +186,7 @@ textarea,
     margin-bottom: 12px;
 }
 
-.hideMenu,
-.hideScreen,
-.hidden {
+.hideMenu, .hideScreen, .hidden {
     visibility: hidden !important;
 }
 
@@ -241,13 +232,11 @@ textarea,
     left: auto;
 }
 
-#BerlineImg1,
-#BerlineImg2 {
+#BerlineImg1, #BerlineImg2 {
     transition: 0.3;
 }
 
-#BerlineImg1:hover,
-#BerlineImg2:hover {
+#BerlineImg1:hover, #BerlineImg2:hover {
     opacity: 0.7;
 }
 
@@ -261,9 +250,7 @@ textarea,
     background-color: transparent;
 }
 
-input,
-textarea,
-[contenteditable] {
+input, textarea, [contenteditable] {
     width: auto;
     -webkit-text-fill-color: inherit;
     -webkit-box-sizing: border-box;
@@ -277,9 +264,7 @@ textarea,
     margin-bottom: .5em;
 }
 
-#answer-container form input#answer::-webkit-input-placeholder,
-#answer-container form input#answer::-webkit-input-placeholder:active,
-#answer-container form input#answer::-webkit-input-placeholder:hover {
+#answer-container form input#answer::-webkit-input-placeholder, #answer-container form input#answer::-webkit-input-placeholder:active, #answer-container form input#answer::-webkit-input-placeholder:hover {
     text-shadow: none;
     -webkit-text-fill-color: #393939;
 }
@@ -344,20 +329,15 @@ textarea,
     0% {
         transform: scale(0.75, 0.75);
     }
-
     100% {
         transform: scale(1.0, 1.0);
     }
 }
 
 @keyframes loading {
-
-    0%,
-    60%,
-    100% {
+    0%, 60%, 100% {
         transform: scaleY(0.01);
     }
-
     35% {
         transform: scale(1);
     }
@@ -368,15 +348,12 @@ textarea,
         font-family: Muli, "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: 0 30px;
     }
-
     .displayOff {
         display: none;
     }
-
     .displayNone {
         display: none !important;
     }
-
     .noJS {
         position: fixed;
         top: 40%;
@@ -391,25 +368,21 @@ textarea,
         box-shadow: 0 1px 16px 0 #800080;
         padding: 10px;
     }
-
     .noJS a {
         text-decoration: none;
         border-bottom: 1px dotted #ffffff;
         background-color: inherit;
     }
-
     .noJSText {
         color: #ffffff;
         text-align: center;
         font-size: 16px;
         background-color: #9966ff;
     }
-
     .noJSText i {
         display: block;
         margin-bottom: 10px;
     }
-
     .loader {
         position: fixed;
         top: 40%;
@@ -418,7 +391,6 @@ textarea,
         width: 80px;
         display: flex;
     }
-
     .loader span {
         width: 10px;
         height: 60px;
@@ -429,12 +401,12 @@ textarea,
 }
 
 /* Large Mobile :960px. */
+
 @media only screen and (max-width: 960px) {
     .chatPadding {
         padding-bottom: calc(40% + 50px);
         background-color: inherit;
     }
-
     .aboutPadding {
         padding-bottom: inherit;
         background-color: inherit;
@@ -456,8 +428,8 @@ textarea,
 }
 
 /*---------chat window with container---------------*/
-#BerlineImg1,
-#BerlineImg2 {
+
+#BerlineImg1, #BerlineImg2 {
     cursor: pointer;
 }
 
@@ -493,14 +465,12 @@ textarea,
     border-color: #1f2836;
 }
 
-div.received_withd_msg p,
-div.sent_msg p {
+div.received_withd_msg p, div.sent_msg p {
     animation: bounceIn 0.2s ease;
     transform-origin: 0 0 0;
 }
 
-.chatbox__title,
-.chatbox__title__convForm {
+.chatbox__title, .chatbox__title__convForm {
     border-bottom: none;
     text-transform: uppercase;
     font-family: "Varela Round", Muli, Arial, sans-serif
@@ -542,8 +512,7 @@ div.sent_msg p {
     box-shadow: 0 1px 16px 0 #7E28BC;
 }
 
-.chatbox__title,
-.chatbox__title__convForm {
+.chatbox__title, .chatbox__title__convForm {
     min-height: 50px;
     padding-right: 10px;
     border-top-left-radius: 8px;
@@ -555,11 +524,10 @@ div.sent_msg p {
     align-items: center;
     text-align: center;
     font-family: Catamaran;
-    z-index: 10;    
+    z-index: 10;
 }
 
-.chatbox__title h5,
-.chatbox__title__convForm h5 {
+.chatbox__title h5, .chatbox__title__convForm h5 {
     height: 50px;
     margin: 0;
     font-size: 16px;
@@ -571,8 +539,7 @@ div.sent_msg p {
     flex-grow: 1;
 }
 
-.chatbox__title h5 a,
-.chatbox__title__convForm h5 a {
+.chatbox__title h5 a, .chatbox__title__convForm h5 a {
     color: #fff;
     max-width: 195px;
     display: inline;
@@ -582,8 +549,7 @@ div.sent_msg p {
     text-overflow: ellipsis;
 }
 
-.chatbox__title h5:before,
-.chatbox__title__convForm h5:before {
+.chatbox__title h5:before, .chatbox__title__convForm h5:before {
     content: '';
     display: block;
     position: absolute;
@@ -596,10 +562,7 @@ div.sent_msg p {
     transform: translateY(-50%);
 }
 
-.chatbox__title__tray,
-.chatbox__title__convForm__tray,
-.chatbox__title__close,
-.chatbox__title__convForm__close {
+.chatbox__title__tray, .chatbox__title__convForm__tray, .chatbox__title__close, .chatbox__title__convForm__close {
     width: 24px;
     height: 24px;
     outline: 0;
@@ -611,23 +574,18 @@ div.sent_msg p {
     transition: opacity 200ms;
 }
 
-.chatbox__title__tray span:hover,
-.chatbox__title__convForm__tray:hover,
-.chatbox__title__close:hover,
-.chatbox__title__convForm__close:hover {
+.chatbox__title__tray span:hover, .chatbox__title__convForm__tray:hover, .chatbox__title__close:hover, .chatbox__title__convForm__close:hover {
     opacity: 1;
 }
 
-.chatbox__title__tray span,
-.chatbox__title__convForm__tray span {
+.chatbox__title__tray span, .chatbox__title__convForm__tray span {
     width: 12px;
     height: 12px;
     display: inline-block;
     border-bottom: 2px solid #fff
 }
 
-.chatbox__title__close svg,
-.chatbox__title__convForm__close svg {
+.chatbox__title__close svg, .chatbox__title__convForm__close svg {
     vertical-align: middle;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -646,8 +604,7 @@ div.chatbox__body.chatMain:before {
     background: linear-gradient(#ffffff, transparent);
 }
 
-.chatbox__body,
-.chatbox__credentials {
+.chatbox__body, .chatbox__credentials {
     padding: 15px;
     border-top: 0;
     background-color: #ffffff;
@@ -666,32 +623,24 @@ div.chatbox__body.chatMain:before {
     box-shadow: none;
 }
 
- /* ****** Uncomment to remove scrollbar space ******
+/* ****** Uncomment to remove scrollbar space ******
 ****** optional: just make scrollbar invisible ****** */
 
-div.chatbox__body::-webkit-scrollbar,
-div.chatbox__body.messaging::-webkit-scrollbar,
-.messaging::-webkit-scrollbar {
+div.chatbox__body::-webkit-scrollbar, div.chatbox__body.messaging::-webkit-scrollbar, .messaging::-webkit-scrollbar {
     width: 0px;
     height: 0px;
     background: transparent;
 }
 
-
-div.chatbox__body::-moz-scrollbar,
-div.chatbox__body.messaging::-moz-scrollbar,
-.messaging::-moz-scrollbar {
+div.chatbox__body::-moz-scrollbar, div.chatbox__body.messaging::-moz-scrollbar, .messaging::-moz-scrollbar {
     width: 0px;
     height: 0px;
     background: transparent;
 }
 
-div.chatbox__body,
-div.chatbox__body.messaging,
-.messaging {
+div.chatbox__body, div.chatbox__body.messaging, .messaging {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-
 
 .chatbox__body {
     font-weight: 400;
@@ -720,8 +669,7 @@ div.chatbox__body.messaging,
     bottom: -212px;
 }
 
-.chatbox--empty .chatbox__body,
-.chatbox--empty .chatbox__message {
+.chatbox--empty .chatbox__body, .chatbox--empty .chatbox__message {
     display: none;
 }
 
@@ -730,13 +678,17 @@ div.chatbox__body.messaging,
 }
 
 /*---------chat window with message---------------*/
+
 /* Styling for main chat page */
+
 .chatMain {
+    height: 450px;
     max-height: 450px;
     overflow-y: auto;
 }
 
 /* Styling for main chat page */
+
 img.chat_img {
     height: 100% !important;
     width: 100% !important;

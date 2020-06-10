@@ -1,5 +1,5 @@
 $(window).on("load", function showPage() {
-    $("body").ready(function() {
+    $("body").ready(function () {
         $("header,section,footer")
             .hide()
             .delay(1000)
@@ -15,8 +15,8 @@ $(window).on("load", function showPage() {
 });
 
 // Chat window manipulation START
-$(window).on("load", function() {
-    $("body").ready(function() {
+$(window).on("load", function () {
+    $("body").ready(function () {
         // Chatbox window for home START
         $(".chatbox_container__home").removeClass("displayNoneChat");
         $(".chatbox_container__home")
@@ -41,8 +41,8 @@ $(window).on("load", function() {
     });
 });
 
-(function($) {
-    $(document).ready(function() {
+(function ($) {
+    $(document).ready(function () {
         var $chatbox = $(".chatbox"),
             $chatboxTitle = $(".chatbox__title"),
             $chatboxTitleClose = $(".chatbox__title__close"),
@@ -53,33 +53,33 @@ $(window).on("load", function() {
 
         $(
             "#instantChat,#instantChat0,#instantChat1,#instantChat2,#instantChat3,#instantChat4"
-        ).on("click", function() {
+        ).on("click", function () {
             $floatingBubble.fadeOut(1e3).hide(); // fadeOut (100ms) of the floatingBubble
             $chatbox_container.removeClass("displayNoneChat"); // Removes .displayNoneChat to display the Chatbox container
             $chatbox.removeClass("chatbox--closed");
             $chatbox.toggleClass("chatbox--tray");
         });
-        $(".floatingBubble").on("click", function() {
+        $(".floatingBubble").on("click", function () {
             $chatbox_container.removeClass("displayNoneChat");
             $chatbox.removeClass("chatbox--closed");
             $chatbox.toggleClass("chatbox--tray");
             $floatingBubble.fadeOut(1e3).hide(); // fadeOut (100ms) of the floatingBubble
         });
-        $(".closeChatWindow").on("click", function() {
+        $(".closeChatWindow").on("click", function () {
             // Closes the chat window once anywhere on the page is clicked apart from footer
             $chatbox.addClass("chatbox--tray");
         });
-        $chatboxTitleClose.on("click", function(e) {
+        $chatboxTitleClose.on("click", function (e) {
             e.stopPropagation();
             $chatbox.addClass("chatbox--closed");
             $(".floatingBubble")
                 .hide()
                 .fadeIn(1e3); // fadeIn (100ms) of the floatingBubble
         });
-        $berlineImg.mouseover(function() {
+        $berlineImg.mouseover(function () {
             $(".berlineImg").addClass("bounceIn rotateIn");
         });
-        $berlineImg.mouseleave(function() {
+        $berlineImg.mouseleave(function () {
             $(".berlineImg").removeClass("bounceIn rotateIn");
         });
     });

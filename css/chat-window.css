@@ -14,12 +14,17 @@
     /* Generate paddings inside elements */
 }
 
-body, .screen {
+body,
+.screen {
     -webkit-tap-highlight-color: transparent;
     /* Removes the blue highlight when button tapped on mobile */
+    margin: 0;
+    padding: 0;
 }
 
-input, textarea, [contenteditable] {
+input,
+textarea,
+[contenteditable] {
     width: auto;
     -webkit-text-fill-color: inherit;
     -webkit-box-sizing: border-box;
@@ -77,9 +82,11 @@ input, textarea, [contenteditable] {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -89,9 +96,11 @@ input, textarea, [contenteditable] {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -186,7 +195,9 @@ input, textarea, [contenteditable] {
     margin-bottom: 12px;
 }
 
-.hideMenu, .hideScreen, .hidden {
+.hideMenu,
+.hideScreen,
+.hidden {
     visibility: hidden !important;
 }
 
@@ -232,11 +243,13 @@ input, textarea, [contenteditable] {
     left: auto;
 }
 
-#BerlineImg1, #BerlineImg2 {
+#BerlineImg1,
+#BerlineImg2 {
     transition: 0.3;
 }
 
-#BerlineImg1:hover, #BerlineImg2:hover {
+#BerlineImg1:hover,
+#BerlineImg2:hover {
     opacity: 0.7;
 }
 
@@ -250,7 +263,9 @@ input, textarea, [contenteditable] {
     background-color: transparent;
 }
 
-input, textarea, [contenteditable] {
+input,
+textarea,
+[contenteditable] {
     width: auto;
     -webkit-text-fill-color: inherit;
     -webkit-box-sizing: border-box;
@@ -264,7 +279,9 @@ input, textarea, [contenteditable] {
     margin-bottom: .5em;
 }
 
-#answer-container form input#answer::-webkit-input-placeholder, #answer-container form input#answer::-webkit-input-placeholder:active, #answer-container form input#answer::-webkit-input-placeholder:hover {
+#answer-container form input#answer::-webkit-input-placeholder,
+#answer-container form input#answer::-webkit-input-placeholder:active,
+#answer-container form input#answer::-webkit-input-placeholder:hover {
     text-shadow: none;
     -webkit-text-fill-color: #393939;
 }
@@ -329,15 +346,20 @@ input, textarea, [contenteditable] {
     0% {
         transform: scale(0.75, 0.75);
     }
+
     100% {
         transform: scale(1.0, 1.0);
     }
 }
 
 @keyframes loading {
-    0%, 60%, 100% {
+
+    0%,
+    60%,
+    100% {
         transform: scaleY(0.01);
     }
+
     35% {
         transform: scale(1);
     }
@@ -348,12 +370,15 @@ input, textarea, [contenteditable] {
         font-family: Muli, "Helvetica Neue", Helvetica, Arial, sans-serif;
         padding: 0 30px;
     }
+
     .displayOff {
         display: none;
     }
+
     .displayNone {
         display: none !important;
     }
+
     .noJS {
         position: fixed;
         top: 40%;
@@ -368,21 +393,25 @@ input, textarea, [contenteditable] {
         box-shadow: 0 1px 16px 0 #800080;
         padding: 10px;
     }
+
     .noJS a {
         text-decoration: none;
         border-bottom: 1px dotted #ffffff;
         background-color: inherit;
     }
+
     .noJSText {
         color: #ffffff;
         text-align: center;
         font-size: 16px;
         background-color: #9966ff;
     }
+
     .noJSText i {
         display: block;
         margin-bottom: 10px;
     }
+
     .loader {
         position: fixed;
         top: 40%;
@@ -391,6 +420,7 @@ input, textarea, [contenteditable] {
         width: 80px;
         display: flex;
     }
+
     .loader span {
         width: 10px;
         height: 60px;
@@ -407,6 +437,7 @@ input, textarea, [contenteditable] {
         padding-bottom: calc(40% + 50px);
         background-color: inherit;
     }
+
     .aboutPadding {
         padding-bottom: inherit;
         background-color: inherit;
@@ -429,7 +460,8 @@ input, textarea, [contenteditable] {
 
 /*---------chat window with container---------------*/
 
-#BerlineImg1, #BerlineImg2 {
+#BerlineImg1,
+#BerlineImg2 {
     cursor: pointer;
 }
 
@@ -437,9 +469,9 @@ input, textarea, [contenteditable] {
     position: fixed;
     bottom: 0;
     right: 4px;
-    width: 300px;
+    width: 415px;
     /* Entire width of chat window */
-    height: 415px;
+    height: 535px;
     /* Entire width of chat window */
     background-color: inherit;
     -webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -452,25 +484,43 @@ input, textarea, [contenteditable] {
 }
 
 .chatbox--tray {
-    bottom: -365px;
+    bottom: calc(-535px + 50px);
+    /* Click anywhere on screen to show only chatboxTitle */
     transition-delay: 300ms;
 }
 
 .chatbox--closed {
-    bottom: -415px;
+    bottom: -100vh;
+    /* Utterly disappear the chatboxTitle */
     transition-delay: 300ms;
+}
+
+.chatbox--empty {
+    height: 272px;
+}
+
+.chatbox--empty.chatbox--closed {
+    bottom: -100vh;
+    /* Utterly disappear the chatboxTitle */
+}
+
+.chatbox--empty.chatbox--tray {
+    bottom: -100vh;
+    /* Utterly disappear the chatboxTitle */
 }
 
 .chatbox .form-control:focus {
     border-color: #1f2836;
 }
 
-div.received_withd_msg p, div.sent_msg p {
+div.received_withd_msg p,
+div.sent_msg p {
     animation: bounceIn 0.2s ease;
     transform-origin: 0 0 0;
 }
 
-.chatbox__title, .chatbox__title__convForm {
+.chatbox__title,
+.chatbox__title__convForm {
     border-bottom: none;
     text-transform: uppercase;
     font-family: "Varela Round", Muli, Arial, sans-serif
@@ -504,15 +554,8 @@ div.received_withd_msg p, div.sent_msg p {
     background: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
 }
 
+.chatbox__title,
 .chatbox__title__convForm {
-    box-shadow: 0 1px 16px 0 #3A8EBB;
-}
-
-.chatbox__title {
-    box-shadow: 0 1px 16px 0 #7E28BC;
-}
-
-.chatbox__title, .chatbox__title__convForm {
     min-height: 50px;
     padding-right: 10px;
     border-top-left-radius: 8px;
@@ -527,7 +570,8 @@ div.received_withd_msg p, div.sent_msg p {
     z-index: 10;
 }
 
-.chatbox__title h5, .chatbox__title__convForm h5 {
+.chatbox__title h5,
+.chatbox__title__convForm h5 {
     height: 50px;
     margin: 0;
     font-size: 16px;
@@ -539,7 +583,8 @@ div.received_withd_msg p, div.sent_msg p {
     flex-grow: 1;
 }
 
-.chatbox__title h5 a, .chatbox__title__convForm h5 a {
+.chatbox__title h5 a,
+.chatbox__title__convForm h5 a {
     color: #fff;
     max-width: 195px;
     display: inline;
@@ -549,7 +594,8 @@ div.received_withd_msg p, div.sent_msg p {
     text-overflow: ellipsis;
 }
 
-.chatbox__title h5:before, .chatbox__title__convForm h5:before {
+.chatbox__title h5:before,
+.chatbox__title__convForm h5:before {
     content: '';
     display: block;
     position: absolute;
@@ -562,7 +608,10 @@ div.received_withd_msg p, div.sent_msg p {
     transform: translateY(-50%);
 }
 
-.chatbox__title__tray, .chatbox__title__convForm__tray, .chatbox__title__close, .chatbox__title__convForm__close {
+.chatbox__title__tray,
+.chatbox__title__convForm__tray,
+.chatbox__title__close,
+.chatbox__title__convForm__close {
     width: 24px;
     height: 24px;
     outline: 0;
@@ -574,18 +623,23 @@ div.received_withd_msg p, div.sent_msg p {
     transition: opacity 200ms;
 }
 
-.chatbox__title__tray span:hover, .chatbox__title__convForm__tray:hover, .chatbox__title__close:hover, .chatbox__title__convForm__close:hover {
+.chatbox__title__tray span:hover,
+.chatbox__title__convForm__tray:hover,
+.chatbox__title__close:hover,
+.chatbox__title__convForm__close:hover {
     opacity: 1;
 }
 
-.chatbox__title__tray span, .chatbox__title__convForm__tray span {
+.chatbox__title__tray span,
+.chatbox__title__convForm__tray span {
     width: 12px;
     height: 12px;
     display: inline-block;
     border-bottom: 2px solid #fff
 }
 
-.chatbox__title__close svg, .chatbox__title__convForm__close svg {
+.chatbox__title__close svg,
+.chatbox__title__convForm__close svg {
     vertical-align: middle;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -604,7 +658,8 @@ div.chatbox__body.chatMain:before {
     background: linear-gradient(#ffffff, transparent);
 }
 
-.chatbox__body, .chatbox__credentials {
+.chatbox__body,
+.chatbox__credentials {
     padding: 15px;
     border-top: 0;
     background-color: #ffffff;
@@ -626,19 +681,25 @@ div.chatbox__body.chatMain:before {
 /* ****** Uncomment to remove scrollbar space ******
 ****** optional: just make scrollbar invisible ****** */
 
-div.chatbox__body::-webkit-scrollbar, div.chatbox__body.messaging::-webkit-scrollbar, .messaging::-webkit-scrollbar {
+div.chatbox__body::-webkit-scrollbar,
+div.chatbox__body.messaging::-webkit-scrollbar,
+.messaging::-webkit-scrollbar {
     width: 0px;
     height: 0px;
     background: transparent;
 }
 
-div.chatbox__body::-moz-scrollbar, div.chatbox__body.messaging::-moz-scrollbar, .messaging::-moz-scrollbar {
+div.chatbox__body::-moz-scrollbar,
+div.chatbox__body.messaging::-moz-scrollbar,
+.messaging::-moz-scrollbar {
     width: 0px;
     height: 0px;
     background: transparent;
 }
 
-div.chatbox__body, div.chatbox__body.messaging, .messaging {
+div.chatbox__body,
+div.chatbox__body.messaging,
+.messaging {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
@@ -657,24 +718,49 @@ div.chatbox__body, div.chatbox__body.messaging, .messaging {
     position: relative;
 }
 
-.chatbox--empty {
-    height: 272px;
-}
-
-.chatbox--empty.chatbox--closed {
-    bottom: -272px;
-}
-
-.chatbox--empty.chatbox--tray {
-    bottom: -212px;
-}
-
-.chatbox--empty .chatbox__body, .chatbox--empty .chatbox__message {
+.chatbox--empty .chatbox__body,
+.chatbox--empty .chatbox__message {
     display: none;
 }
 
 .chatbox--empty .chatbox__credentials {
     display: block;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .chatbox--empty {
+        height: 80vh;
+    }
+
+    .chatbox--empty.chatbox--closed {
+        bottom: -100vh;
+        /* Utterly disappear the chatboxTitle */
+    }
+
+    .chatbox--empty.chatbox--tray {
+        bottom: -100vh;
+        /* Utterly disappear the chatboxTitle */
+    }
+
+    .chatbox {
+        width: 98vw;
+        /* Entire width of chat window */
+        height: 80vh;
+        max-width: 500px;
+        /* Entire width of chat window */
+    }
+
+    .chatbox--tray {
+        bottom: calc(-80vh + 50px);
+        /* Click anywhere on screen to show only chatboxtitle */
+        transition-delay: 300ms;
+    }
+
+    .chatbox--closed {
+        bottom: -100vh;
+        /* Utterly disappear the chatboxTitle */
+        transition-delay: 300ms;
+    }
 }
 
 /*---------chat window with message---------------*/

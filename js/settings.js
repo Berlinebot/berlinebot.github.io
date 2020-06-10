@@ -5,22 +5,50 @@ var currentQuestion = 0,
 var local = (!document.location.hostname); // check if local
 // --------------------------------------- //
 
-$(document).ready(function () {
+
+/***********************************
+                GREETINGS START
+    ***********************************/
+jQuery(document).ready(function ($) {
+	var greet;
 	var date = new Date();
 	var sec = date.getSeconds();
 	var min = date.getMinutes();
 	var hour = date.getHours();
+	var year = date.getFullYear();
 	var copyrightYear = date.getFullYear();
 
-	$("document").ready(function () {
-		$("#copyright").text(copyrightYear); // Sets copyright year 
-	});
+	if (hour === 5 || hour === 6 || hour === 7 || hour === 8 || hour === 9 || hour === 10 || hour === 11) {
+
+		greet = '<div class=\"incoming_msg\"><div class=\"received_msg\"><div class=\"animated fadeInUp bubbleLeft received_withd_msg\"><p>  Hi. Good morning, I\'m Berline</p></div></div>';
+
+
+	} else if (hour === 12) {
+
+		greet = '<div class=\"incoming_msg\"><div class=\"received_msg\"><div class=\"animated fadeInUp bubbleLeft received_withd_msg\"><p>  Hi. Good noon, I\'m Berline</p></div></div>';
+
+
+	} else if (hour === 13 || hour === 14 || hour === 15 || hour === 16 || hour === 17) {
+
+		greet = '<div class=\"incoming_msg\"><div class=\"received_msg\"><div class=\"animated fadeInUp bubbleLeft received_withd_msg\"><p>  Hi. Good afternoon, I\'m Berline</p></div></div>';
+
+
+	} else if (hour === 18 || hour === 19 || hour === 20 || hour === 21 || hour === 22 || hour === 23 || hour === 0 || hour === 1 || hour === 2 || hour === 3 || hour === 4) {
+
+		greet = '<div class=\"incoming_msg\"><div class=\"received_msg\"><div class=\"animated fadeInUp bubbleLeft received_withd_msg\"><p>  Hi. Good evening, I\'m Berline</p></div></div>';
+
+
+	}
+
+	$("#welcomeMsg").html(greet);
+	$("#welcomeMsg").fadeIn(600);
+	$("#copyright").text(copyrightYear); // SET CURRENT YEAR AS COPYRIGHT YEAR
+
+	/*************************
+	         Greetings End 
+	*************************/
 });
 
-
-
-
-//Greetings End
 
 function storyController(questions) {
 	current = 0;
@@ -38,8 +66,8 @@ function createMessage(messagesArray, i, response) {
 	response = typeof response !== 'undefined' ? response : 0;
 
 	// add this HTML to the front and back of the message for #style
-    var htmlWrapperBeginning = '<div class="msg_history"><div class="incoming_msg"><div class="received_msg"><div class="animated fadeInUp bubbleLeft received_withd_msg"><p>',
-        htmlWrapperEnding = '</p><span class="voice"></span></div></div></div>';
+	var htmlWrapperBeginning = '<div class="msg_history"><div class="incoming_msg"><div class="received_msg"><div class="animated fadeInUp bubbleLeft received_withd_msg"><p>',
+		htmlWrapperEnding = '</p><span class="voice"></span></div></div></div>';
 
 	// If this message is not the first, use the previous to calculate a delay, otherwise use a number
 	var delay = (i > 0) ? calculateDelay(messagesArray[i - 1]) : 1000;
@@ -69,7 +97,7 @@ function createMessage(messagesArray, i, response) {
 
 			$('#chat-container').append(htmlWrapperBeginning + messagesArray[i] + htmlWrapperEnding);
 			//Special case for chat
-			if ($(".active").attr('id') =="chat") {
+			if ($(".active").attr('id') == "chat") {
 				smoothScrollBottom();
 			}
 			i++;
@@ -80,7 +108,7 @@ function createMessage(messagesArray, i, response) {
 
 // Creates an answer input bubble
 function createAnswerField() {
-    var htmlAnswerField = '<div class="outgoing_msg" id ="answer-container"> <div class="line animated fadeInUp bubbleRight sent_msg p"><form action="#" onsubmit="return false;"><label for="answer"></label><input required="required" novalidate="novalidate" autocomplete="on" min="2" max="40" formnovalidate="formnovalidate" spellcheck="true" autofocus="autofocus" type="text" name="answer" id="answer" class="" value="" placeholder="Type response…"></form></div></>';
+	var htmlAnswerField = '<div class="outgoing_msg" id ="answer-container"> <div class="line animated fadeInUp bubbleRight sent_msg p"><form action="#" onsubmit="return false;"><label for="answer"></label><input required="required" novalidate="novalidate" autocomplete="on" min="2" max="40" formnovalidate="formnovalidate" spellcheck="true" autofocus="autofocus" type="text" name="answer" id="answer" class="" value="" placeholder="Type response…"></form></div></>';
 
 	if (questions[currentQuestion].ending) {
 		return 1;
@@ -91,7 +119,7 @@ function createAnswerField() {
 	$('#answer').keyup(function (event) {
 		if (event.keyCode == 13) {
 			var answer = $.trim($('#answer').val());
-			if (answer !="") {
+			if (answer != "") {
 				$('#answer-container').remove();
 				createAnswerMessage(answer);
 			} else {
@@ -107,14 +135,14 @@ function createAnswerField() {
 	$('#answer').focus();
 
 	//Special case for chat
-	if ($(".active").attr('id') =="chat") {
+	if ($(".active").attr('id') == "chat") {
 		smoothScrollBottom();
 	}
 }
 
 function createAnswerMessage(answer) {
-    var htmlWrapperBeginning = '<div class="outgoing_msg"><div class="animated fadeInUp bubbleRight sent_msg"><p>',
-        htmlWrapperEnding = '</p><span class="voice"></span></div></div>';
+	var htmlWrapperBeginning = '<div class="outgoing_msg"><div class="animated fadeInUp bubbleRight sent_msg"><p>',
+		htmlWrapperEnding = '</p><span class="voice"></span></div></div>';
 
 	$('#chat-container').append(htmlWrapperBeginning + answer + htmlWrapperEnding);
 
@@ -164,14 +192,13 @@ function calculateDelay(string) {
 }
 
 function smoothScrollBottom() {
-  $(".chatbox__body")
-    .stop()
-    .animate(
-      {
-        scrollTop: $(".chatbox__body")[0].scrollHeight
-      },
-      1500
-    ); // delay with 1.5s
+	$(".chatbox__body")
+		.stop()
+		.animate({
+				scrollTop: $(".chatbox__body")[0].scrollHeight
+			},
+			1500
+		); // delay with 1.5s
 }
 
 // Tabs
@@ -189,7 +216,7 @@ function tabHandler() {
 		// If Active when you click
 		if (!$(this).hasClass('active')) {
 			animationOver = false;
-			var tabContent ="#" + $(this).attr('data-content');
+			var tabContent = "#" + $(this).attr('data-content');
 
 			// Make tab active
 			$tab.removeClass('active');
@@ -204,7 +231,7 @@ function tabHandler() {
 			$(tabContent).show().addClass('activeContent');
 
 			//Special case for chat
-			if ($(".active").attr('id') =="chat") {
+			if ($(".active").attr('id') == "chat") {
 				smoothScrollBottom();
 				$(".message").each(function () {
 					$(this).removeClass('tada').removeClass('fadeInUp').addClass('fadeIn');
@@ -212,7 +239,7 @@ function tabHandler() {
 			}
 
 			//Special case for about
-			if ($(".active").attr('id') =="about") {
+			if ($(".active").attr('id') == "about") {
 				$('html,body').animate({
 					scrollTop: 0
 				}, 0);

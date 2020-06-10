@@ -22,7 +22,12 @@
     /* background: rgba(255, 0, 0, .1);
     box-shadow: 0 0 0 1px red; */
 }
+
 /* ========= UNCOMMENT DURING DEVELOPMENT ========= */
+
+html {
+    scroll-behavior: smooth;
+}
 
 ol,
 ul {
@@ -134,9 +139,10 @@ button.btn.cancelPdTop {
     line-height: 28px;
     font-size: 11px;
 }
+
 .trigger {
-   padding: 12px 18px;
-   line-height: 28px;
+    padding: 12px 18px;
+    line-height: 28px;
 }
 
 .btn.active.focus,
@@ -367,7 +373,7 @@ a.floating:after {
 }
 
 .valera p {
-    font-family: Valera Round;
+    font-family: 'Valera Round';
     font-size: 17px;
 }
 
@@ -1330,12 +1336,8 @@ a.dropdown-item:hover {
     padding: 20px;
 }
 
-.dropdown-item:nth-last-child(1) {
-    border-top: 1px solid #be99ff;
-}
-
-.dropdown-item:nth-last-child(3) {
-    border-bottom: 1px solid #be99ff;
+.dropdown-item+a.dropdown-item {
+    border-top: 1px solid #be99ff !important;
 }
 
 .navbar-nav .dropdown .dropdown-item {
@@ -4858,7 +4860,6 @@ h6 {
     font-size: 12px;
     font-weight: 500;
     position: relative;
-    left: -50px;
     top: -4px;
 }
 

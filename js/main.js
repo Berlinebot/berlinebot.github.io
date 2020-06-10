@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     var window_width = $(window).width(),
         window_height = window.innerHeight,
         header_height = $(".default-header").height(),
@@ -6,7 +6,7 @@ $(function() {
         fitscreen = window_height - header_height;
     $(".fullscreen").css("height", window_height);
     $(".fitscreen").css("height", fitscreen);
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $(".default-header").addClass("header-scrolled");
         } else {
@@ -23,11 +23,11 @@ $(function() {
         }
     });
     $("#search-input-box").hide();
-    $("#search").on("click", function() {
+    $("#search").on("click", function () {
         $("#search-input-box").slideToggle();
         $("#search-input").focus();
     });
-    $("#close-search").on("click", function() {
+    $("#close-search").on("click", function () {
         $("#search-input-box").slideUp(500);
     });
     $(".counter").counterUp({
@@ -96,7 +96,7 @@ $(function() {
     $('.navbar-nav a[href*="#"]')
         .not('[href="#"]')
         .not('[href="#0"]')
-        .on("click", function(event) {
+        .on("click", function (event) {
             if (
                 location.pathname.replace(/^\//, "") ==
                 this.pathname.replace(/^\//, "") &&
@@ -112,7 +112,7 @@ $(function() {
                             scrollTop: target.offset().top - 50
                         },
                         1e3,
-                        function() {
+                        function () {
                             var $target = $(target);
                             $target.focus();
                             if ($target.is(":focus")) {
@@ -303,9 +303,23 @@ $(function() {
             });
         }
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
         $("#mc_embed_signup")
             .find("form")
             .ajaxChimp();
     });
+});
+
+// Smooth Scroll
+$('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: (target.offset().top - navHeight + 5)
+            }, 1000, "easeInOutExpo");
+            return false;
+        }
+    }
 });

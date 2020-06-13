@@ -1244,10 +1244,6 @@ a.dropdown-item:hover {
     color: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
 }
 
-.navbar {
-    padding: 25px 15px;
-}
-
 @media (max-width: 992px) {
     .navbar .navbar-collapse {
         background: -webkit-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);

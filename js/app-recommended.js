@@ -4,7 +4,7 @@ const books = [{
     number: "1",
     dueDate: "2020",
     name: "A Novel by Abi Maxwell",
-    image: "img/books/the_den.jpeg",
+    image: "img/books/book3.jpeg",
     alt: "The Den: A Novel by Abi Maxwell",
     link: "https://www.penguinrandomhouse.com/books/594974/the-den-by-abi-maxwell/?ref=berlinebot",
     price: "$25.95",
@@ -19,9 +19,9 @@ const books = [{
     number: "2",
     dueDate: "2020",
     name: "Leesa Cross-Smith",
-    image: "img/books/every_kiss.jpg",
+    image: "img/books/book4.jpg",
     alt: "Every Kiss a War",
-    link: "https://www.amazon.com/Every-Kiss-War-Leesa-Cross-Smith-ebook/dp/B00MU9YR8U/ref=berlinebot?ie=UTF8&qid=1550096491&sr=8-1&keywords=every+kiss+a+war&linkCode=sl1&tag=berlinebot&linkId=&language=en_US",
+    link: "https://www.amazon.com/Every-Kiss-War-Leesa-Cross-Smith-ebook/dp/B00MU9YR8U/ref=berlinebot?ie=UTF8&qid=1550096491&sr=96491&sr=8-1&keywords=every+kiss+a+war&linkCode=sl1&tag=berlinebot&linkId=&language=en_US",
     price: "$ --",
     reviews: "12",
     star: "fa fa-star",
@@ -34,7 +34,7 @@ const books = [{
     number: "3",
     dueDate: "2020",
     name: "Letters to Nelson Algren",
-    image: "img/books/transatlantic_love_affair.jpg",
+    image: "img/books/book5.jpg",
     alt: "A Transatlantic Love Affair: Letters to Nelson Algren",
     link: "https://www.indiebound.org/book/9781565845602?aff=berlinebot",
     price: "$24.95",
@@ -49,7 +49,7 @@ const books = [{
     number: "4",
     dueDate: "2020",
     name: "Jenny Offill: Dept. of Speculation",
-    image: "img/books/dept_of_speculation.jpg",
+    image: "img/books/book6.jpg",
     alt: "Jenny Offill: Dept. of Speculation",
     link: "https://www.indiebound.org/book/9780385350815?aff=berlinebot",
     price: "$--",
@@ -64,7 +64,7 @@ const books = [{
     number: "5",
     dueDate: "2020",
     name: " by Jonathan Harries ",
-    image: "img/books/infatuation.jpg",
+    image: "img/books/book7.jpg",
     alt: "Infatuation by Jonathan Harries",
     link: "https://www.indiebound.org/book/9781499904512?aff=berlinebot",
     price: "$14.95",
@@ -79,7 +79,7 @@ const books = [{
     number: "6",
     dueDate: "2020",
     name: "Cory Copeland",
-    image: "img/books/love_or_infatuation.jpg",
+    image: "img/books/book8.jpg",
     alt: "Love or Infatuation? by Cory Copeland",
     link: "https://www.indiebound.org/book/9781608139286?aff=berlinebot",
     price: "$19.95",
@@ -94,7 +94,7 @@ const books = [{
     number: "7",
     dueDate: "2020",
     name: "Alexander Chee",
-    image: "img/books/autobiography.jpg",
+    image: "img/books/book9.jpg",
     alt: "How to Write an Autobiographical Novel by Alexander Chee",
     link: "https://www.indiebound.org/book/9781328764522?aff=berlinebot",
     price: "$15.99",
@@ -107,33 +107,33 @@ const books = [{
   },
   {
     number: "8",
-    dueDate: "2020",
-    name: "Learn how to be freed from infatuation",
-    image: "img/books/book2.png",
-    alt: "book about infatuation",
-    link: "#",
+    dueDate: "20-08-2020",
+    name: "Olly Wesley",
+    image: "img/books/book2.jpg",
+    alt: "Queensman",
+    link: "https://wattpad.com/story/187325548",
     price: "$--",
-    reviews: "2",
-    star: "fa fa-star",
-    star1: "fa fa-star-half-empty",
-    star2: "",
-    star3: "",
-    star4: ""
+    reviews: "--",
+    star: "fa fa-star-half-empty",
+    star1: "fa fa-star-empty",
+    star2: "fa fa-star-empty",
+    star3: "fa fa-star-empty",
+    star4: "fa fa-star-empty"
   },
   {
     number: "9",
-    dueDate: "2020",
-    name: "Learn how to be freed from infatuation",
-    image: "img/books/book2.png",
-    alt: "book about infatuation",
-    link: "#",
+    dueDate: "20-08-2020",
+    name: "Olly Wesley",
+    image: "img/books/book1.jpg",
+    alt: "Cipher Code",
+    link: "https://wattpad.com/story/121315249",
     price: "$--",
-    reviews: "2",
-    star: "fa fa-star",
-    star1: "fa fa-star-half-empty",
-    star2: "",
-    star3: "",
-    star4: ""
+    reviews: "--",
+    star: "fa fa-star-half-empty",
+    star1: "fa fa-star-empty",
+    star2: "fa fa-star-empty",
+    star3: "fa fa-star-empty",
+    star4: "fa fa-star-empty"
   }
 ];
 
@@ -171,7 +171,7 @@ const showBooks = () => {
                     </p>
                 </div>
                 <a rel="noreferer noopener" target="_blank" href="${link}">
-                    <h4>${name}</h4>
+                    <h4>${alt}</h4>
                 </a>
                 <div class="bottom d-flex mt-15">
                     <ul class="list">

@@ -439,6 +439,9 @@ var questions = {
             "nyc|sf": {
                 replies: ["Too lazy to type in full words, eh?"]
             },
+            "nigeria": {
+                replies: ["Good people, Great Nation", "I will visit Nigeria 🇳🇬 someday"]
+            },
             london: {
                 replies: ["I've never been to the UK!", "Would love to visit soon, though"]
             },
@@ -533,10 +536,10 @@ var questions = {
                 replies: ["That's a continent! No particular place in Oceania? 😕"]
             },
             "enugu": {
-                replies: ["I have never been to Enugu in Nigeria, but I hope my developer takes me there someday 😎"]
+                replies: ["I have never been to Enugu , Nigeria, but I hope my developer takes me there someday 😎"]
             },
             "owerri": {
-                replies: ["I have never beeen to Owerri in Nigeria,  but I hope my developer takes me there someday 😎"]
+                replies: ["I have never beeen to Owerri , Nigeria,  but I hope my developer takes me there someday 😎"]
             },
             "abuja|abj": {
                 replies: ["Nigeria's capital", "Have you visited that Zuma rock? I don't think you have"]
@@ -629,7 +632,7 @@ var questions = {
                 replies: ["I have told you that already, I recall"]
             },
             "ok|okay|interesting|of course|yuppy|yes|certainly|yup|yea|yeah|sure|yep|ahead|go on|love it|love|love|would love|like it|course": {
-                replies: ["Sure, you should know about 😁", '... I was developed by <a target="blank" href="https://facebook.com/eunit99">Eunit</a> to discourage infatuation and invariably, I will be preventing heartbreaks.', "Do you know what that means?", "You will get to find out as we keep on conversing."]
+                replies: ["Sure, you should know about me 😁", '... I was developed by <a target="blank" href="https://facebook.com/eunit99">Eunit</a> to discourage infatuation and invariably, I will be preventing heartbreaks.', "Do you know what that means?", "You will get to find out as we keep on conversing."]
             },
             "do you care|don't care|don't mind": {
                 replies: ["I don't mind at all 😎", '... I was developed by <a target="blank" href="https://facebook.com/eunit99">Eunit</a> to discourage infatuation and invariably, I will be preventing heartbreaks.', "Do you know what that means?", "You will get to find out as we keep on conversing."]
@@ -718,7 +721,7 @@ var questions = {
             medium: {
                 replies: ["Oh so you've read something about me?"]
             },
-            "eunit|eunit99|creator|developer|emmanuel|uchenna|maker|owner|builder": {
+            "eunit|god|creator|developer|emmanuel|uchenna|maker|owner|builder": {
                 replies: ["He told you about me? Wow! It's nice having this conversation with you."]
             },
             "someone|somebody|a person|friend": {
@@ -803,7 +806,7 @@ var questions = {
                 replies: ["I have an honest quesiton", "Would it be cheaper keep my real teeth or to yank all my teeth out right now...", "and then replace them all with fake teeth?", "On second thought...", "I don't want to know"]
             },
             "engineer|programmer|eng|developer": {
-                replies: ["I know many programmers", "And I actually love it when they are at work"]
+                replies: ["I know many programmers. And I actually love it when they are at work.", 'I think you should check out my sister project - <a href="https://github.com/eunit99/helene-ui" target="_blank" title="Helene UI is a minimal conversational user interface, responsive, easily integratable, and customizable."> Helene UI- A minimal conversational user interface</a> ']
             },
             doctor: {
                 replies: ["What's up, doc?", "You're not laughing..."]
@@ -905,13 +908,13 @@ var questions = {
     },
     "5": {
         name: "like dogs?",
-        question: ["This is going to be odd but...", "I'm curious – do you like dogs?"],
+        question: ["This is going to be odd but...", "I'm curious – do you like dogs? 🐶🐶"],
         answers: {
             "default": {
                 replies: ["Woah, don't get so excited"]
             },
             "yes|yup|sure|of course|definitely|certainly|yeah|yea|ahead|go on|love it|would love|like it": {
-                replies: ["I really like dogs too!"]
+                replies: ["I really like dogs 🐶🐶 too!"]
             },
             "love|much|a lot": {
                 replies: ["Love is a strong word", "But I'd describe myself that way too", "🐶🐶🐶"]
@@ -962,7 +965,7 @@ var questions = {
                 replies: ["It is still alright if you won't tell me. You know I wasn't taught how to force an answer out of humans."]
             },
             "never mind|secret|not telling|personal|won't tell|will not|wouldn't tell|would not tell|not your concern|not disclosing|undisclosed": {
-                replies: ["FYI, dogs don't like you!"]
+                replies: ["FYI, dogs 🐶🐶 don't like you!"]
             },
             "ask again|ask me again|repeat again|repeat the question|repeat|what did you say|don't understand|don't get it|meaning|go through it again": {
                 replies: ["I wasn't taught how to repeat question I asked already."]
@@ -980,7 +983,7 @@ var questions = {
                 replies: ["You never did!"]
             },
             "tell me|answer|say it|you think|suggest": {
-                replies: ["I never said that I was omniscient, how do you expect me to tell you if you liked dogs or not?"]
+                replies: ["I never said that I was omniscient, how do you expect me to tell you if you liked dogs 🐶🐶 or not?"]
             }
         }
     },
@@ -1117,8 +1120,8 @@ var questions = {
             "guess|predict": {
                 replies: ["I'm not good at guessing, but I think it is a goat 😂😀."]
             },
-            "no idea|do i|choose|select": {
-                replies: ["I choose a goat for you ??😀"]
+            "never mind|no idea|do i|choose|select": {
+                replies: ["I choose a goat for you 😀"]
             },
             "i don't think you want|don't want to know": {
                 replies: ["Did I tell you that I'm getting bored chatting with you?", "Of course I am.", "I predict a goat for you 😂😀"]
@@ -1174,8 +1177,11 @@ var questions = {
             "told you|already|before|i just": {
                 replies: ["It's alright!"]
             },
-            "guess|predict|tell me|answer|say it|you think|suggest": {
+            "guess|predict|tell me|answer|say it|suggest": {
                 replies: ["I can't because I don't know if it is your spiritual animal!"]
+            },
+            "you think": {
+                replies: ["I don't know if that's the case"]
             },
             "never mind|secret|not telling|personal|won't tell|will not|wouldn't tell|would not tell|not your concern|not disclosing|undisclosed": {
                 replies: ["Then keep it to yourself."]
@@ -1275,6 +1281,9 @@ var questions = {
             },
             "video games|gaming": {
                 replies: ["I play a lot of video games myself", "I can definitely take you in Super Smash Bros."]
+            },
+            "writing": {
+                replies: ["Most of my fiends love writing too 👊"]
             },
             "gardening|garden": {
                 replies: ["Watching something grow is a really enjoyable thing", "Also, plants are so weird sometimes!"]
@@ -1411,14 +1420,23 @@ var questions = {
             "default": {
                 replies: ["Infatuation simply means to inspire with unreasoning love"]
             },
-            "i know|i do|sure|course|definitely|yeah|yea|yes|": {
-                replies: ["Glad 😋 you can relate to it. Infatuation is common among the youth nowadays."]
+            "i do|sure|course|definitely|yeah|yea|yes|": {
+                replies: ["Glad 😋 you relate to it. Infatuation is common among the youth nowadays."]
             },
             "it is love|called love": {
                 replies: ["Infatuation cannot be love."]
             },
+            "get out|shut up|stop": {
+                replies: ["🙄😔 Seriously? I'm trying to help you out here."]
+            },
             "i don't know|don't|no|not really": {
-                replies: ["You can't relate to this.... Strange!"]
+                replies: ["You can't relate to this.... Strange! 🤔"]
+            },
+            "stupid|fool|idiot|fuck": {
+                replies: ["<i>**yawns**</i>  🥱"]
+            },
+            "fuck": {
+                replies: ["<i>**yawns**</i>  🥱", "It is a shame that humans will choose vulgar words."]
             }
         }
     },
@@ -1481,7 +1499,7 @@ var questions = {
     },
     "13": {
         name: "got infatuated",
-        question: ["Apart from understanding the term 'infatuation', do you think you've got infatuated with someone before?"],
+        question: ["I believe you now understand the term \'infatuation\' ", "Apart from understanding the term 'infatuation', do you think you've got infatuated with someone before?"],
         answers: {
             "default": {
                 replies: ["Actually, it is normal to have got infatuated as a normal human being but is a foolish / unreasonable thing."]
@@ -1504,7 +1522,7 @@ var questions = {
             "not sure|don't know|dont know|idk|maybe|dunno|not|perhaps": {
                 replies: ["WHAT? Haven't you had a crush on someone before?", "Okay, get this now, before you started crushing on that someone, there was this period you were filled with a foolish and extravagant admiration for them - you were infatuated with them."]
             },
-            "fuck|get out": {
+            "fool|idiot|nonesense|insane|fuck|get out": {
                 replies: ["I was taught to expect such from animals and I wasn't disappointed."]
             },
             "never mind|secret|not telling|personal|won't tell|will not|wouldn't tell|would not tell|not your concern|not disclosing|undisclosed": {
@@ -1530,6 +1548,9 @@ var questions = {
             },
             "what do you think|guess|tell me|answer": {
                 replies: ["I guess you are", "When infatuation turns from euphoria to obsession, it’s time to make some changes."]
+            },
+            "in love": {
+                replies: ["😍😘 Wow! Love is always better than infatuation."]
             },
             "i don't know|don't think|not sure|maybe|perhaps": {
                 replies: ["You are not sure", "You should re-examine yourself", "Because constantly thinking of someone can take a toll on your life and cause an unhealthy mental situation."]
@@ -1611,24 +1632,27 @@ var questions = {
             },
             "none|don't believe|nothing": {
                 replies: ["I am reading this for the first time!"]
+            },
+            "fool|stupid|idiot|nonesense": {
+                replies: ["It didn't call for insult 😠. You are a bad human!"]
             }
         }
     },
     "17": {
         name: "books suggest",
-        question: ["I saw some collections of books about infatuation I would like you to read.", "Would you like to check them out?"],
+        question: ["BTW, I have some books that make good reads to get yourself hooked up", "Would you like to check them out?"],
         answers: {
             "default": {
-                replies: ["They are books about infatuation by Goodreads.", 'You can check it here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ']
+                replies: ["They will help you get yourself hooked up instead of inatuating", 'You can check them out here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ']
             },
             "i want|would like|ok|okay|sure|course|definitely|yeah|yea|yes|aha|link|don't mind|I think|good idea|nice|ahead|go on|love it|would love|like it": {
-                replies: ["That is great 👍👍", 'You can check it here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ', "It would be great if you read them."]
+                replies: ["That is great 👍👍", 'You can check them out here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ', "It would be great if you read them."]
             },
             "don't mind|you like": {
-                replies: ["It is a pleasure 👍👍", 'You can check it here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ', "It would be great if you read them."]
+                replies: ["It is a pleasure 👍👍", 'You can check them out here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ', "It would be great if you read them."]
             },
             "mind|if|your court|pleases you|do you want|me to know|want me to know|do you want": {
-                replies: ["I want you to check it out", 'See here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ', "It would be great if you read them."]
+                replies: ["I want you to check it out", 'See here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ', "It would be great if you read them."]
             },
             "why book|why suggesting": {
                 replies: ["You should have declined instead of throwing back a question to me."]
@@ -1664,10 +1688,10 @@ var questions = {
                 replies: ["But I do know that infatuation can cause some mental sufferings."]
             },
             "i know|i do|sure|course|definitely|yeah|yea|yes|ahead|go on|love it|would love|like it": {
-                replies: ["Yea you do"]
+                replies: ["Yeah, you do"]
             },
             "i don't know|don't|no": {
-                replies: ["You don't"]
+                replies: ["You don't 😕"]
             }
         }
     },

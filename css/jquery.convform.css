@@ -75,6 +75,8 @@
      padding: 0 !important;
      position: relative;
      box-shadow: 0 0 5px 5px rgba(222, 222, 222, 0.4);
+     position: absolute;
+     bottom: -15vh;
 }
  form.convFormDynamic textarea.userInputDynamic {
      border: none;
@@ -279,7 +281,7 @@
 }
  form.convFormDynamic button.submit:hover {
      background: #06b79a;
-     color: #fff;
+     color: #fff !important;
 }
  button.submit.glow {
      box-shadow: 0 0 10px 5px rgba(6, 197, 166, 0.4);

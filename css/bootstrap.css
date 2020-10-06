@@ -9018,6 +9018,10 @@ button.bg-dark:hover {
     }
 }
 
+.text-align-center {
+    text-align: center !important;
+}
+
 .text-monospace {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }

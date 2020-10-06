@@ -6,6 +6,29 @@
 /* =================================== */
 /* Basic Style 
 /* =================================== */
+
+/* Custom fonts for this template  */
+
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700");
+@import url("https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=Muli");
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+
+/* ========= UNCOMMENT DURING DEVELOPMENT ========= */
+
+* {
+    /* background: rgba(255, 0, 0, .1);
+    box-shadow: 0 0 0 1px red; */
+}
+
+/* ========= UNCOMMENT DURING DEVELOPMENT ========= */
+
+html {
+    scroll-behavior: smooth;
+}
+
 ol,
 ul {
     margin: 0;
@@ -34,6 +57,41 @@ iframe {
 
 .inherited-color {
     color: inherit;
+}
+
+::-moz-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::-webkit-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::-o-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::-ms-selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
+}
+
+::selection {
+    background: #7c32ff;
+    color: #fff;
+    text-shadow: 1px 1px 1px #555;
+    font-weight: 500;
 }
 
 .i,
@@ -80,6 +138,11 @@ button.btn.cancelPdTop {
     box-shadow: 0 3px 2px #cccccc;
     line-height: 28px;
     font-size: 11px;
+}
+
+.trigger {
+    padding: 12px 18px;
+    line-height: 28px;
 }
 
 .btn.active.focus,
@@ -310,8 +373,8 @@ a.floating:after {
 }
 
 .valera p {
-    font-family: Valera Round;
-    font-size: 16px;
+    font-family: 'Valera Round';
+    font-size: 17px;
 }
 
 /** * For modern browsers * 1. The space content is one way to avoid an Opera bug when the * contenteditable attribute is included anywhere else in the document. * Otherwise it causes space to appear at the top and bottom of elements * that are clearfixed. * 2. The use of `table` rather than `block` is only necessary if using * `:before` to contain the top-margins of child elements. */
@@ -1181,10 +1244,6 @@ a.dropdown-item:hover {
     color: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
 }
 
-.navbar {
-    padding: 25px 15px;
-}
-
 @media (max-width: 992px) {
     .navbar .navbar-collapse {
         background: -webkit-linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
@@ -1273,12 +1332,8 @@ a.dropdown-item:hover {
     padding: 20px;
 }
 
-.dropdown-item:nth-last-child(1) {
-    border-top: 1px solid #be99ff;
-}
-
-.dropdown-item:nth-last-child(3) {
-    border-bottom: 1px solid #be99ff;
+.dropdown-item+a.dropdown-item {
+    border-top: 1px solid #be99ff !important;
 }
 
 .navbar-nav .dropdown .dropdown-item {
@@ -1417,17 +1472,18 @@ a.dropdown-item:hover {
     }
 }
 
-@media (max-width: 768px) {
-    .home-banner-left {
-        text-align: center;
-    }
-}
-
 .home-banner-left h1 {
     color: #222;
     font-size: 48px;
     line-height: 1em;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', Arial, serif;
+}
+
+@media (max-width: 768px) {
+    .home-banner-left {
+        text-align: center;
+    }
 }
 
 .home-banner-left h1 span {
@@ -1468,6 +1524,24 @@ a.dropdown-item:hover {
     margin-right: auto !important;
     margin-left: auto !important;
     display: block;
+    filter: opacity(100%);
+    -webkit-filter: opacity(100%);
+    -moz-filter: opacity(100%);
+    -o-filter: opacity(100%);
+    -ms-filter: opacity(100%);
+
+}
+
+.home-banner-right img:hover {
+    filter: grayscale(50%);
+    -webkit-filter: grayscale(50%);
+    -moz-filter: grayscale(50%);
+    -o-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
 @media (max-width: 991px) {
@@ -1725,39 +1799,67 @@ a.dropdown-item:hover {
     opacity: 1;
 }
 
-.single-popular-course .details {
-    padding: 40px 30px;
-    background: #f9f9fb;
+.books-area {
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    justify-content: center;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
 }
 
-.single-popular-course .thumb {
+.single-popular-books {
+    width: 300px;
+    max-width: 300px;
+    height: 600px;
+    margin: 25px;
+}
+
+.single-popular-books .details {
+    padding: 40px 30px;
+    background: #f9f9fb;
+    width: 300px;
+    height: 210px;
+    max-width: 300px;
+    margin: 0;
+
+}
+
+.single-popular-books .thumb {
     overflow: hidden;
 }
 
-.single-popular-course .thumb img {
-    width: 100%;
+.single-popular-books .thumb img {
+    width: 300px;
+    max-width: 300px;
+    height: 400px;
+    max-height: 400px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    object-fit: fill;
+    margin: O;
 }
 
-.single-popular-course .name {
+.single-popular-books .name {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
 }
 
-.single-popular-course .value {
+.single-popular-books .value {
     color: #222222;
     font-weight: 700;
 }
 
-.single-popular-course p {
+.single-popular-books p {
     margin-bottom: 0;
 }
 
-.single-popular-course h4 {
+.single-popular-books h4 {
     line-height: 27px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -1765,34 +1867,34 @@ a.dropdown-item:hover {
     transition: all 0.3s ease 0s;
 }
 
-.single-popular-course a {
+.single-popular-books a {
     color: #222222;
 }
 
-.single-popular-course .bottom .list li {
+.single-popular-books .bottom .list li {
     display: inline-block;
 }
 
-.single-popular-course .bottom .list li a {
+.single-popular-books .bottom .list li a {
     color: #ebb35e;
     font-size: 14px;
 }
 
-.single-popular-course .bottom p {
+.single-popular-books .bottom p {
     font-size: 13px;
     font-weight: 500;
 }
 
-.single-popular-course:hover {
+.single-popular-books:hover {
     cursor: pointer;
 }
 
-.single-popular-course:hover .thumb img {
+.single-popular-books:hover .thumb img {
     cursor: pointer;
     transform: scale(1.05);
 }
 
-.single-popular-course:hover h4 {
+.single-popular-books:hover h4 {
     color: #7c32ff;
 }
 
@@ -1957,6 +2059,18 @@ a.dropdown-item:hover {
 
 .other-feature-item:hover i {
     color: #7c32ff;
+}
+
+.testimonial {
+    width: 96px !important;
+    height: 96px !important;
+    border: 2px solid #7c32ff;
+    border-radius: 50%;
+    padding: 2px;
+    object-fit: cover;
+    -web-kit-object-fit: cover;
+    -ms-object-fit: cover;
+    -o-object-fit: cover;
 }
 
 .testimonials-area {
@@ -2203,6 +2317,21 @@ a.dropdown-item:hover {
 
 .blog-post-area .single-blog-post .overlay {
     background: rgba(0, 0, 0, 0.5);
+    width: 350px;
+    height: 400px;
+}
+
+.blog-post-area .single-blog-post:hover {
+    cursor: pointer;
+}
+
+.blog-post-area .single-blog-post img.img-fluid {
+    width: 350px;
+    height: 400px;
+    object-fit: fill;
+    -web-kit-object-fit: fill;
+    -ms-object-fit: fill;
+    -o-object-fit: fill;
 }
 
 .blog-post-area .single-blog-post .top-text {
@@ -2210,6 +2339,7 @@ a.dropdown-item:hover {
     top: -30px;
     right: 30px;
     background: #828bb2;
+    color: #ffffff;
     padding: 30px;
     text-align: center;
 }
@@ -2307,7 +2437,6 @@ a.dropdown-item:hover {
 .course-details-area .title {
     font-size: 21px;
     border: none;
-    cursor: pointer;
     margin-top: 40px;
     border-bottom: 1px solid #eeeeee;
     position: relative;
@@ -2794,6 +2923,10 @@ a.dropdown-item:hover {
 
 .post-content-area .single-post .excert {
     margin-bottom: 20px;
+}
+
+a.single-blog-post-btn {
+    color: inherit;
 }
 
 .post-content-area .single-post .primary-btn {
@@ -4723,7 +4856,7 @@ h6 {
     font-size: 12px;
     font-weight: 500;
     position: relative;
-    left: -50px;
+    top: -4px;
 }
 
 .footer-area .single-footer-widget .click-btn:focus {

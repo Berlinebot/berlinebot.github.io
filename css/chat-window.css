@@ -18,6 +18,8 @@ body,
 .screen {
     -webkit-tap-highlight-color: transparent;
     /* Removes the blue highlight when button tapped on mobile */
+    margin: 0;
+    padding: 0;
 }
 
 input,
@@ -36,9 +38,9 @@ textarea,
 }
 
 .highlight {
-    color: #9966ff;
-    background-color: inherit;
-    font-weight: bold;
+    background-color: #9966ff;
+    color: #ffffff;
+    padding: 12px auto;
 }
 
 .menuIcon {
@@ -116,7 +118,7 @@ textarea,
     clear: both;
 }
 
-.bottom {
+.bottom1 {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -429,6 +431,7 @@ textarea,
 }
 
 /* Large Mobile :960px. */
+
 @media only screen and (max-width: 960px) {
     .chatPadding {
         padding-bottom: calc(40% + 50px);
@@ -456,6 +459,7 @@ textarea,
 }
 
 /*---------chat window with container---------------*/
+
 #BerlineImg1,
 #BerlineImg2 {
     cursor: pointer;
@@ -465,9 +469,9 @@ textarea,
     position: fixed;
     bottom: 0;
     right: 4px;
-    width: 300px;
+    width: 415px;
     /* Entire width of chat window */
-    height: 415px;
+    height: 535px;
     /* Entire width of chat window */
     background-color: inherit;
     -webkit-transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -480,13 +484,29 @@ textarea,
 }
 
 .chatbox--tray {
-    bottom: -365px;
+    bottom: calc(-535px + 50px);
+    /* Click anywhere on screen to show only chatboxTitle */
     transition-delay: 300ms;
 }
 
 .chatbox--closed {
-    bottom: -415px;
+    bottom: -100vh;
+    /* Utterly disappear the chatboxTitle */
     transition-delay: 300ms;
+}
+
+.chatbox--empty {
+    height: 272px;
+}
+
+.chatbox--empty.chatbox--closed {
+    bottom: -100vh;
+    /* Utterly disappear the chatboxTitle */
+}
+
+.chatbox--empty.chatbox--tray {
+    bottom: -100vh;
+    /* Utterly disappear the chatboxTitle */
 }
 
 .chatbox .form-control:focus {
@@ -534,14 +554,6 @@ div.sent_msg p {
     background: linear-gradient(90deg, #7c32ff 0%, #c738d8 100%);
 }
 
-.chatbox__title__convForm {
-    box-shadow: 0 1px 16px 0 #3A8EBB;
-}
-
-.chatbox__title {
-    box-shadow: 0 1px 16px 0 #7E28BC;
-}
-
 .chatbox__title,
 .chatbox__title__convForm {
     min-height: 50px;
@@ -555,7 +567,7 @@ div.sent_msg p {
     align-items: center;
     text-align: center;
     font-family: Catamaran;
-    z-index: 10;    
+    z-index: 10;
 }
 
 .chatbox__title h5,
@@ -639,11 +651,23 @@ div.chatbox__body.chatMain:before {
     position: absolute;
     width: 100%;
     display: block;
-    height: 30px;
+    height: 40px;
     top: 0;
     left: 0;
     z-index: 2;
     background: linear-gradient(#ffffff, transparent);
+}
+
+.chatbox__body.active:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    display: block;
+    height: 40px;
+    top: 9%;
+    left: 0;
+    z-index: 2;
+    background: linear-gradient(#fff, transparent);
 }
 
 .chatbox__body,
@@ -667,7 +691,7 @@ div.chatbox__body.chatMain:before {
 }
 
 /* ****** Uncomment to remove scrollbar space ******
-****** optional: just make scrollbar invisible ******
+****** optional: just make scrollbar invisible ****** */
 
 div.chatbox__body::-webkit-scrollbar,
 div.chatbox__body.messaging::-webkit-scrollbar,
@@ -676,14 +700,20 @@ div.chatbox__body.messaging::-webkit-scrollbar,
     height: 0px;
     background: transparent;
 }
-*/
+
+div.chatbox__body::-moz-scrollbar,
+div.chatbox__body.messaging::-moz-scrollbar,
+.messaging::-moz-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+}
 
 div.chatbox__body,
 div.chatbox__body.messaging,
 .messaging {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-
 
 .chatbox__body {
     font-weight: 400;
@@ -700,18 +730,6 @@ div.chatbox__body.messaging,
     position: relative;
 }
 
-.chatbox--empty {
-    height: 262px;
-}
-
-.chatbox--empty.chatbox--tray {
-    bottom: -212px;
-}
-
-.chatbox--empty.chatbox--closed {
-    bottom: -262px;
-}
-
 .chatbox--empty .chatbox__body,
 .chatbox--empty .chatbox__message {
     display: none;
@@ -721,14 +739,54 @@ div.chatbox__body.messaging,
     display: block;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .chatbox--empty {
+        height: 80vh;
+    }
+
+    .chatbox--empty.chatbox--closed {
+        bottom: -100vh;
+        /* Utterly disappear the chatboxTitle */
+    }
+
+    .chatbox--empty.chatbox--tray {
+        bottom: -100vh;
+        /* Utterly disappear the chatboxTitle */
+    }
+
+    .chatbox {
+        width: 98vw;
+        /* Entire width of chat window */
+        height: 80vh;
+        max-width: 500px;
+        /* Entire width of chat window */
+    }
+
+    .chatbox--tray {
+        bottom: calc(-80vh + 50px);
+        /* Click anywhere on screen to show only chatboxtitle */
+        transition-delay: 300ms;
+    }
+
+    .chatbox--closed {
+        bottom: -100vh;
+        /* Utterly disappear the chatboxTitle */
+        transition-delay: 300ms;
+    }
+}
+
 /*---------chat window with message---------------*/
+
 /* Styling for main chat page */
+
 .chatMain {
+    height: 450px;
     max-height: 450px;
     overflow-y: auto;
 }
 
 /* Styling for main chat page */
+
 img.chat_img {
     height: 100% !important;
     width: 100% !important;

@@ -651,23 +651,11 @@ div.chatbox__body.chatMain:before {
     position: absolute;
     width: 100%;
     display: block;
-    height: 40px;
+    height: 30px;
     top: 0;
     left: 0;
     z-index: 2;
     background: linear-gradient(#ffffff, transparent);
-}
-
-.chatbox__body.active:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    display: block;
-    height: 40px;
-    top: 9%;
-    left: 0;
-    z-index: 2;
-    background: linear-gradient(#fff, transparent);
 }
 
 .chatbox__body,

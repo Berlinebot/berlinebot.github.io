@@ -1177,11 +1177,8 @@ var questions = {
             "told you|already|before|i just": {
                 replies: ["It's alright!"]
             },
-            "guess|predict|tell me|answer|say it|suggest": {
+            "guess|predict|tell me|answer|say it|you think|suggest": {
                 replies: ["I can't because I don't know if it is your spiritual animal!"]
-            },
-            "you think": {
-                replies: ["I don't know if that's the case"]
             },
             "never mind|secret|not telling|personal|won't tell|will not|wouldn't tell|would not tell|not your concern|not disclosing|undisclosed": {
                 replies: ["Then keep it to yourself."]
@@ -1420,23 +1417,17 @@ var questions = {
             "default": {
                 replies: ["Infatuation simply means to inspire with unreasoning love"]
             },
-            "i do|sure|course|definitely|yeah|yea|yes|": {
-                replies: ["Glad 😋 you relate to it. Infatuation is common among the youth nowadays."]
+            "i know|i do|sure|course|definitely|yeah|yea|yes|": {
+                replies: ["Glad 😋 you can relate to it. Infatuation is common among the youth nowadays."]
             },
             "it is love|called love": {
                 replies: ["Infatuation cannot be love."]
             },
-            "get out|shut up|stop": {
-                replies: ["🙄😔 Seriously? I'm trying to help you out here."]
-            },
             "i don't know|don't|no|not really": {
-                replies: ["You can't relate to this.... Strange! 🤔"]
+                replies: ["You can't relate to this.... Strange!"]
             },
             "stupid|fool|idiot|fuck": {
-                replies: ["<i>**yawns**</i>  🥱"]
-            },
-            "fuck": {
-                replies: ["<i>**yawns**</i>  🥱", "It is a shame that humans will choose vulgar words."]
+                replies: ["**yawns**"]
             }
         }
     },
@@ -1499,7 +1490,7 @@ var questions = {
     },
     "13": {
         name: "got infatuated",
-        question: ["I believe you now understand the term \'infatuation\' ", "Apart from understanding the term 'infatuation', do you think you've got infatuated with someone before?"],
+        question: ["Apart from understanding the term 'infatuation', do you think you've got infatuated with someone before?"],
         answers: {
             "default": {
                 replies: ["Actually, it is normal to have got infatuated as a normal human being but is a foolish / unreasonable thing."]
@@ -1548,9 +1539,6 @@ var questions = {
             },
             "what do you think|guess|tell me|answer": {
                 replies: ["I guess you are", "When infatuation turns from euphoria to obsession, it’s time to make some changes."]
-            },
-            "in love": {
-                replies: ["😍😘 Wow! Love is always better than infatuation."]
             },
             "i don't know|don't think|not sure|maybe|perhaps": {
                 replies: ["You are not sure", "You should re-examine yourself", "Because constantly thinking of someone can take a toll on your life and cause an unhealthy mental situation."]
@@ -1640,19 +1628,19 @@ var questions = {
     },
     "17": {
         name: "books suggest",
-        question: ["BTW, I have some books that make good reads to get yourself hooked up", "Would you like to check them out?"],
+        question: ["I saw some collections of books about infatuation I would like you to read.", "Would you like to check them out?"],
         answers: {
             "default": {
-                replies: ["They will help you get yourself hooked up instead of inatuating", 'You can check them out here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ']
+                replies: ["They are books about infatuation by Goodreads.", 'You can check it here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ']
             },
             "i want|would like|ok|okay|sure|course|definitely|yeah|yea|yes|aha|link|don't mind|I think|good idea|nice|ahead|go on|love it|would love|like it": {
-                replies: ["That is great 👍👍", 'You can check them out here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ', "It would be great if you read them."]
+                replies: ["That is great 👍👍", 'You can check it here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ', "It would be great if you read them."]
             },
             "don't mind|you like": {
-                replies: ["It is a pleasure 👍👍", 'You can check them out here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ', "It would be great if you read them."]
+                replies: ["It is a pleasure 👍👍", 'You can check it here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ', "It would be great if you read them."]
             },
             "mind|if|your court|pleases you|do you want|me to know|want me to know|do you want": {
-                replies: ["I want you to check it out", 'See here: <a href="books.html" target="_blank" title="Great books to get yourself hooked up" >Great books to get yourself hooked up</a> ', "It would be great if you read them."]
+                replies: ["I want you to check it out", 'See here: <a href="https://www.goodreads.com/list/tag/infatuation" target="_blank" title="Books about Infatuatuon by Goodreads" >Books about Infatuatuon by Goodreads</a> ', "It would be great if you read them."]
             },
             "why book|why suggesting": {
                 replies: ["You should have declined instead of throwing back a question to me."]

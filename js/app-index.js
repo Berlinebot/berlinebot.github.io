@@ -196,14 +196,14 @@ const showBooks = () => {
             </div>
         </div>
     </div>
-        `)
+              `)
     );
     container.innerHTML = output;
 };
 
 document.addEventListener("DOMContentLoaded", showBooks);
 if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         navigator.serviceWorker
             .register("js/serviceWorker.min.js")
             .then(res => console.log("service worker registered"))
